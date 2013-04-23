@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>{{match_title}}</h1>
+
+<hr>
+
+<h2>
+	<code>{{facility.name}}</code>
+</h2>
+
+<p>{{description}}</p>
+
+{% if facility.get_matched_facility %}
+<fieldset>
+	<legend>Matched to</legend>
+	<code>{{facility.get_matched_facility.name}}</code>
+	<a href="/mopup/{{lga.id}}/{{fac_type}}/{{fac_id}}/clear_match">[x]</a>
+</fieldset>
+{% endif %}
+
+{% if no_facilities_available_for_list %}
+	<p>
+		<em>There are no facilities available to select.</em>
+	</p>
+{% else %}
+	<ul>
+		{% for facility in available_for_list %}
+		<li>
+			<a href="/mopup/{{lga.id}}/{{fac_type}}/{{fac_id}}/match_to/{{facility.id}}">
+				<code>{{facility.name}}</code>
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+{% endif %}
+
+<p><a href="/mopup/{{lga.id}}">Back</a></p>
+
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

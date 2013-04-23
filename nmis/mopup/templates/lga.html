@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>LGA: {{lga.name}}</h1>
+
+<hr>
+
+<h2>Surveyed Facilities</h2>
+<ul>
+	{% for facility in surveyed_facilities %}
+	<li>
+		{% if facility.matched_id %}
+			<code>{{facility.name}}</code> <em>matched to</em> <code>{{facility.matched_facility_name}}</code> <a href="/mopup/{{lga.id}}/surveyed/{{facility.id}}/clear_match">[x]</a>
+		{% else %}
+			<a href="/mopup/{{lga.id}}/surveyed/{{facility.id}}"><code>{{facility.name}}</code></a>
+		{% endif %}
+	</li>
+	{% endfor %}
+</ul>
+
+<hr>
+
+<h2>Listed Facilities</h2>
+<ul>
+	{% for facility in listed_facilities %}
+	<li>
+		{% if facility.matched_id %}
+			<code>{{facility.name}}</code> <em>matched to</em> <code>{{facility.matched_facility_name}}</code> <a href="/mopup/{{lga.id}}/listed/{{facility.id}}/clear_match">[x]</a>
+		{% else %}
+			<a href="/mopup/{{lga.id}}/listed/{{facility.id}}"><code>{{facility.name}}</code></a>
+		{% endif %}
+	</li>
+	{% endfor %}
+</ul>
+
+<p>
+	<a href="/mopup/">Back to LGA list</a>
+</p>
+
+{% endblock %}

@@ -1,0 +1,70 @@
+[
+    {
+        "pk": 1,
+        "model": "mopup.surveyedfacility",
+        "fields": {
+            "name": "Surveyed facility 1",
+            "nmis_id": "123abc456xyz1",
+            "lga": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "mopup.surveyedfacility",
+        "fields": {
+            "name": "Surveyed facility 2",
+            "nmis_id": "123abc456xyz2",
+            "lga": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "mopup.surveyedfacility",
+        "fields": {
+            "name": "Surveyed facility 3",
+            "nmis_id": "123abc456xyz3",
+            "lga": 1
+        }
+    },
+    {
+        "pk": 4,
+        "model": "mopup.surveyedfacility",
+        "fields": {
+            "name": "Surveyed facility 4",
+            "nmis_id": "123abc456xyz4",
+            "lga": 1
+        }
+    },
+    {
+        "pk": 1,
+        "model": "mopup.listedfacility",
+        "fields": {
+            "name": "LGA provided facility 1",
+            "lga": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "mopup.listedfacility",
+        "fields": {
+            "name": "LGA provided facility 2",
+            "lga": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "mopup.listedfacility",
+        "fields": {
+            "name": "LGA provided facility 3",
+            "lga": 1
+        }
+    },
+    {
+        "pk": 4,
+        "model": "mopup.listedfacility",
+        "fields": {
+            "name": "LGA provided facility 4",
+            "lga": 1
+        }
+    }
+]

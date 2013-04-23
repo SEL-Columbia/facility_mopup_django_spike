@@ -1,0 +1,15 @@
+tmp/*
+*.pyc
+*~
+.DS_Store
+db.sqlite3
+error.log
+site_media/css/sass/.sass-cache/*
+static/CACHE/*
+.sass-cache
+*orig
+search_index
+
+local_settings.py
+.~lock.*
+*.swp

@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<ul>
+	{% for lga in lgas %}
+	<li><a href="/mopup/{{lga.id}}/">{{lga.name}}</a></li>
+	{% endfor %}
+</ul>
+{% endblock %}
